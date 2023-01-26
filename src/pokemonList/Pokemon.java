@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public abstract class Pokemon {
+public abstract class Pokemon implements Cloneable {
 
     // Constantes
 
@@ -270,4 +270,14 @@ public abstract class Pokemon {
                 + ", currentStatistics=" + currentStatistics + ", totalEv=" + totalEv + "]";
     }
 
+    @Override
+    public Object clone() {
+        Object obj = null;
+        try {
+            obj = super.clone();
+        } catch (Exception e) {
+            System.out.println("Erreur lors du clone du Pokémon : " + e);
+        }
+        return (Pokemon) obj;
+    }
 }
