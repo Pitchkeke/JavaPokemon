@@ -40,11 +40,19 @@ public class Bulbizarre extends Pokemon {
     }
 
     public static Bulbizarre createPokemon() {
-        List<Integer> stat = new ArrayList<Integer>(Arrays.asList(45, 49, 49, 65, 65, 45));
         List<Integer> iv = new ArrayList<Integer>(Arrays.asList(31, 31, 31, 31, 31, 31));
 
         Bulbizarre bulbizarre = new Bulbizarre();
-        createPokemon(bulbizarre, "Bulbizarre", 100, stat, iv, 1, 0);
+        Bulbizarre.createPokemon(bulbizarre, "Bulbizarre", 100, iv, 1);
+
+        return bulbizarre;
+    }
+
+    public static Bulbizarre createPokemon(Bulbizarre bulbizarre, String name, int level, List<Integer> iv, int nature) {
+        List<Integer> stat = new ArrayList<Integer>(Arrays.asList(45, 49, 49, 65, 65, 45));
+        int courbeXp = 1;
+
+        Bulbizarre.createPokemon(bulbizarre, name, level, stat, iv, nature, courbeXp);
 
         return bulbizarre;
     }
