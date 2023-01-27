@@ -9,11 +9,13 @@ import java.util.List;
 
 public class Bulbizarre extends Pokemon {
 
-    private Bulbizarre() {
+    public static final List<Integer> BASE_STATISTICS_LEVEL_1 = new ArrayList<Integer>(Arrays.asList(45, 49, 49, 65, 65, 45));
+    public static final int COURBE_XP = 1;
+    protected Bulbizarre() {
         super();
     }
 
-    private Bulbizarre(String defaultName,
+    protected Bulbizarre(String defaultName,
                          int encounterLevel,
                          List<Integer> baseStatisticsLevel1,
                          List<Integer> iv,
@@ -49,10 +51,7 @@ public class Bulbizarre extends Pokemon {
     }
 
     public static Bulbizarre createPokemon(Bulbizarre bulbizarre, String name, int level, List<Integer> iv, int nature) {
-        List<Integer> stat = new ArrayList<Integer>(Arrays.asList(45, 49, 49, 65, 65, 45));
-        int courbeXp = 1;
-
-        Bulbizarre.createPokemon(bulbizarre, name, level, stat, iv, nature, courbeXp);
+        Bulbizarre.createPokemon(bulbizarre, name, level, BASE_STATISTICS_LEVEL_1, iv, nature, COURBE_XP);
 
         return bulbizarre;
     }
