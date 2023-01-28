@@ -11,6 +11,7 @@ public class Herbizarre extends Bulbizarre {
 
     public static final List<Integer> BASE_STATISTICS_LEVEL_1 = new ArrayList<Integer>(Arrays.asList(60, 62, 63, 80, 80, 60));
 
+    public static final int LEVEL_TO_EVOLVE = 32;
     protected Herbizarre() {
         super();
     }
@@ -51,7 +52,7 @@ public class Herbizarre extends Bulbizarre {
     }
 
     public static Herbizarre createPokemon(Herbizarre herbizarre, String name, int level, List<Integer> iv, int nature) {
-        Herbizarre.createPokemon(herbizarre, name, level, BASE_STATISTICS_LEVEL_1, iv, nature, COURBE_XP);
+        Herbizarre.createPokemon(herbizarre, name, level, Herbizarre.BASE_STATISTICS_LEVEL_1, iv, nature, Herbizarre.COURBE_XP);
 
         return herbizarre;
     }

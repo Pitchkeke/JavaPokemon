@@ -45,13 +45,13 @@ public class Florizarre extends Herbizarre {
         List<Integer> iv = new ArrayList<Integer>(Arrays.asList(31, 31, 31, 31, 31, 31));
 
         Florizarre florizarre = new Florizarre();
-        Florizarre.createPokemon(florizarre, "	Florizarre", 100, iv, 1);
+        Florizarre.createPokemon(florizarre, "Florizarre", 100, iv, 1);
 
         return florizarre;
     }
 
     public static Florizarre createPokemon(Florizarre florizarre, String name, int level, List<Integer> iv, int nature) {
-        Florizarre.createPokemon(florizarre, name, level, BASE_STATISTICS_LEVEL_1, iv, nature, COURBE_XP);
+        Florizarre.createPokemon(florizarre, name, level, Florizarre.BASE_STATISTICS_LEVEL_1, iv, nature, Florizarre.COURBE_XP);
 
         return florizarre;
     }
