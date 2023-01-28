@@ -10,7 +10,10 @@ import java.util.List;
 public class Bulbizarre extends Pokemon {
 
     public static final List<Integer> BASE_STATISTICS_LEVEL_1 = new ArrayList<Integer>(Arrays.asList(45, 49, 49, 65, 65, 45));
+
     public static final int COURBE_XP = 1;
+
+    public static final int LEVEL_TO_EVOLVE = 16;
     protected Bulbizarre() {
         super();
     }
@@ -51,7 +54,7 @@ public class Bulbizarre extends Pokemon {
     }
 
     public static Bulbizarre createPokemon(Bulbizarre bulbizarre, String name, int level, List<Integer> iv, int nature) {
-        Bulbizarre.createPokemon(bulbizarre, name, level, BASE_STATISTICS_LEVEL_1, iv, nature, COURBE_XP);
+        Bulbizarre.createPokemon(bulbizarre, name, level, Bulbizarre.BASE_STATISTICS_LEVEL_1, iv, nature, Bulbizarre.COURBE_XP);
 
         return bulbizarre;
     }

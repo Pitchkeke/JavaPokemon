@@ -9,6 +9,11 @@ import java.util.List;
 
 public class Carapuce extends Pokemon {
 
+    public static final List<Integer> BASE_STATISTICS_LEVEL_1 = new ArrayList<Integer>(Arrays.asList(44, 48, 65, 50, 64, 43));
+
+    public static final int COURBE_XP = 1;
+
+    public static final int LEVEL_TO_EVOLVE = 16;
     private Carapuce() {
         super();
     }
@@ -49,10 +54,7 @@ public class Carapuce extends Pokemon {
     }
 
     public static Carapuce createPokemon(Carapuce carapuce, String name, int level, List<Integer> iv, int nature) {
-        List<Integer> stat = new ArrayList<Integer>(Arrays.asList(44, 48, 65, 50, 64, 43));
-        int courbeXp = 1;
-
-        Carapuce.createPokemon(carapuce, name, level, stat, iv, nature, courbeXp);
+        Carapuce.createPokemon(carapuce, name, level, Carapuce.BASE_STATISTICS_LEVEL_1, iv, nature, Carapuce.COURBE_XP);
 
         return carapuce;
     }

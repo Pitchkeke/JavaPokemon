@@ -9,6 +9,11 @@ import java.util.List;
 
 public class Salameche extends Pokemon {
 
+    public static final List<Integer> BASE_STATISTICS_LEVEL_1 = new ArrayList<Integer>(Arrays.asList(39, 52, 43, 60, 50, 65));
+
+    public static final int COURBE_XP = 1;
+
+    public static final int LEVEL_TO_EVOLVE = 16;
     private Salameche() {
         super();
     }
@@ -49,10 +54,7 @@ public class Salameche extends Pokemon {
     }
 
     public static Salameche createPokemon(Salameche salameche, String name, int level, List<Integer> iv, int nature) {
-        List<Integer> stat = new ArrayList<Integer>(Arrays.asList(39, 52, 43, 60, 50, 65));
-        int courbeXp = 1;
-
-        Salameche.createPokemon(salameche, name, level, stat, iv, nature, courbeXp);
+        Salameche.createPokemon(salameche, name, level, Salameche.BASE_STATISTICS_LEVEL_1, iv, nature, Salameche.COURBE_XP);
 
         return salameche;
     }
